@@ -1,0 +1,212 @@
+[
+  {
+    "source_id": "main:bilibili_001",
+    "case_id": "case_01",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "华为德国",
+    "url": "https://www.bilibili.com/video/BV1yBG76WExf/",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "main:bilibili_002",
+    "case_id": "case_02",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "国企出国",
+    "url": "http://bilibili.com/video/BV1ygXLBjEpy/?spm_id_from=333.1387.upload.video_card.click",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "main:bilibili_003",
+    "case_id": "case_02",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "国企出国",
+    "url": "https://www.bilibili.com/video/BV1NQXSBjEse/?spm_id_from=333.1387.upload.video_card.click&vd_source=11329ac32dfe6835df8ca4bd0b3825f2",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "main:xiaohongshu_001",
+    "case_id": "case_03",
+    "source_type": "xiaohongshu",
+    "platform": "Xiaohongshu",
+    "title": "林木",
+    "url": "http://xhslink.com/o/Aw3N8DtUxVE",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "missing:podcast_001",
+    "case_id": "case_04",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "卫哲",
+    "url": "https://podcasts.apple.com/au/podcast/whats-next-科技早知道/id1494812579?i=1000583135159",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "main:podcast_002",
+    "case_id": "case_05",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "大厂裸辞来澳洲",
+    "url": "https://podcasts.apple.com/au/podcast/澳洲创业访谈录/id1879743524?i=1000768250686",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "main:podcast_003",
+    "case_id": "case_06",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "Olga工作",
+    "url": "https://podcasts.apple.com/au/podcast/组织进化论/id1561091832?i=1000680973692",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "main:podcast_004",
+    "case_id": "case_07",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "葱花",
+    "url": "https://podcasts.apple.com/au/podcast/知行小酒馆/id1559695855?i=1000756321718",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_002",
+    "case_id": "case_08",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "微软阿里创业",
+    "url": "https://podcasts.apple.com/au/podcast/微软-阿里光环褪去-在澳洲做ai创业-如何逆风翻盘-对话vincent/id1879743524?i=1000756550730",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_003",
+    "case_id": "case_09",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "Cath长期主义",
+    "url": "https://podcasts.apple.com/au/podcast/澳洲创业访谈录/id1879743524?i=1000753007778",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_004",
+    "case_id": "case_10",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "长期主义",
+    "url": "https://podcasts.apple.com/au/podcast/自我进化论/id1498170617?i=1000741520103",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_005",
+    "case_id": "case_11",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "博彩段子",
+    "url": "https://podcasts.apple.com/au/podcast/stellaxamy-自定義-podcast/id1728983621?i=1000758402014",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_006",
+    "case_id": "case_12",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "妙鸭",
+    "url": "https://podcasts.apple.com/au/podcast/张小珺jùn-商业访谈录/id1634356920?i=1000746127892",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_007",
+    "case_id": "case_13",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "范皓宇 - 原教旨PM",
+    "url": "https://podcasts.apple.com/au/podcast/42章经/id1700299886?i=1000731303884",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_008",
+    "case_id": "case_14",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "酱油 - 漫剧",
+    "url": "https://podcasts.apple.com/au/podcast/十字路口crossing/id1729552193?i=1000742205335",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_009",
+    "case_id": "case_15",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "张春",
+    "url": "https://podcasts.apple.com/au/podcast/岩中花述/id1582119137?i=1000654868269",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:podcast_010",
+    "case_id": "case_16",
+    "source_type": "podcast",
+    "platform": "Apple Podcasts",
+    "title": "CFO",
+    "url": "https://podcasts.apple.com/au/podcast/68-年底升职加薪-新年如何先一步拿机会-前世界500强cfo来指导/id1788737922?i=1000745824160",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "missing:bilibili_001",
+    "case_id": "case_17",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "本科同学深漂八年",
+    "url": "https://www.bilibili.com/video/BV1fFkTB9EYu?buvid=YA40F0AE39ABA9AB42E7B1E2D80CAFC1C876&from_spmid=main.space-contribution.0.0&is_story_h5=false&mid=gnGAC9eQx1d870r8XEhf7w==&plat_id=114&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=EF013EEA-6E17-43A4-A7E8-3E4F68BBA276&share_source=COPY&share_tag=s_i&timestamp=1780287364&unique_k=1mv4ZC5&up_id=637113690&vd_source=11329ac32dfe6835df8ca4bd0b3825f2",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "missing:bilibili_002",
+    "case_id": "case_18",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "战鹰",
+    "url": "https://www.bilibili.com/video/BV1dkGR6LEF2?buvid=YA40F0AE39ABA9AB42E7B1E2D80CAFC1C876&is_story_h5=false&mid=gnGAC9eQx1d870r8XEhf7w==&plat_id=114&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=E8EA35F8-FFAD-4983-9A95-4F44D5DEFB48&share_source=COPY&share_tag=s_i&timestamp=1780287445&unique_k=X8kHBdB&up_id=496688267&vd_source=11329ac32dfe6835df8ca4bd0b3825f2",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "missing:bilibili_003",
+    "case_id": "case_19",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "徐志胜",
+    "url": "https://www.bilibili.com/video/BV1Cx6oBAETE?buvid=YA40F0AE39ABA9AB42E7B1E2D80CAFC1C876&from_spmid=tm.recommend.0.0&is_story_h5=false&mid=gnGAC9eQx1d870r8XEhf7w==&plat_id=114&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=F56E530A-6132-422F-B796-749C20330044&share_source=COPY&share_tag=s_i&timestamp=1780288380&unique_k=3trCCS2&up_id=502554238&vd_source=11329ac32dfe6835df8ca4bd0b3825f2",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "missing:bilibili_004",
+    "case_id": "case_20",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "Tim",
+    "url": "https://www.bilibili.com/video/BV1B5xkzPEhx?buvid=YA40F0AE39ABA9AB42E7B1E2D80CAFC1C876&from_spmid=main.space-contribution.0.0&is_story_h5=false&mid=gnGAC9eQx1d870r8XEhf7w==&plat_id=114&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=C5B7081A-06B3-4B4F-B8CA-A54CF185A27C&share_source=COPY&share_tag=s_i&timestamp=1780288350&unique_k=qco4jci&up_id=538596213&vd_source=11329ac32dfe6835df8ca4bd0b3825f2",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  }
+]

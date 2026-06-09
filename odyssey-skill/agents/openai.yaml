@@ -1,0 +1,8 @@
+interface:
+  display_name: "奥德赛 Skill"
+  short_description: "用真实人生案例推荐可参考播客"
+  brand_color: "#EA5549"
+  default_prompt: "Use $odyssey-skill to find real decision reference cases and podcast sources for my current life fork."
+
+policy:
+  allow_implicit_invocation: true
