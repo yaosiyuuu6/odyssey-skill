@@ -1,12 +1,49 @@
-# Odyssey Skill
+# Odyssey Skill / 奥德赛.skill
+
+![Odyssey Skill cover](assets/cover-odyssey.png)
+
+> 每个人都在自己的奥德赛。
+>
+> 在他人的旅程里，找到你的下一步。
+>
+> *Every life is an odyssey.*
+>
+> *Find your next step in stories already lived.*
+
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blue.svg)
+![Codex](https://img.shields.io/badge/Codex-Skill-black.svg)
+![Python](https://img.shields.io/badge/Python-stdlib-yellow.svg)
 
 Odyssey Skill is an installable AI-agent skill for finding real life-decision reference cases and podcast sources from the Odyssey Map case library.
 
-It is built for users who ask questions like:
+它不替你做决定，也不把人生问题压成建议清单。它会从真实的人生选择故事里，找到与你处境相近的路径、约束、代价和结果，让你在别人的旅程里看见自己的下一步。
 
-> 我的背景是大厂产品经理，工作四年，现在想裸辞，有什么推荐的播客吗？
+Built for Codex, Claude Code, and other Agent Skills-compatible runtimes. The skill searches a published GitHub JSON database, returns real decision stories with source links, and answers with a gentle but evidence-bounded style.
 
-The skill does not tell users what to choose. It searches a published GitHub JSON database, returns real decision stories with source links, and answers with a gentle but evidence-bounded style.
+[效果示例](#效果示例) · [安装](#install-in-codex) · [数据来源](#data-updates) · [工作原理](#what-it-includes) · [边界](#product-boundary)
+
+---
+
+## 效果示例
+
+```text
+用户  ❯ 我的背景是大厂产品经理，工作四年，现在想裸辞，有什么推荐的播客吗？
+
+奥德赛 ❯ 听起来你不是没想过，而是有几个顾虑卡在一起了。
+          我先往“想停下来，但现实压力还在”的方向找几个真实故事。
+          我们不急着下结论，先一起看看别人是怎么走过这段的。
+
+          这里有几个可以先看的方向：
+
+          1. 有人从稳定工作里停下来，先处理长期消耗感，再慢慢重建节奏。
+          2. 有人没有立刻裸辞，而是把副业、储蓄和时间窗口先拆开算清楚。
+          3. 也有人离开大厂后才发现，真正要面对的不是职业选择，而是生活方式选择。
+
+          你想先看哪一种？
+```
+
+This is not life advice. It is a search-and-story skill: every recommendation should point back to real source material when available.
 
 ## What It Includes
 
