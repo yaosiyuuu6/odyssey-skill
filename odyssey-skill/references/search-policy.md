@@ -15,7 +15,7 @@ Results are useful as references, not as recommended choices.
 
 ## If Context Is Missing
 
-Ask one concise follow-up question before searching only when the user gives a very broad intention such as “我想裸辞” and there is no clear search angle. Do not ask all missing details at once.
+Ask one concise follow-up question before searching when the user gives a very broad intention such as “我想裸辞” and there is no clear search angle. Also wait if the user is clearly still expressing their situation; do not interrupt with results just because there is already enough searchable context. Do not ask all missing details at once.
 
 Minimum useful context:
 
@@ -25,7 +25,7 @@ Minimum useful context:
 - hard constraints
 - what kind of reference they want
 
-If the user does not answer, proceed with a reasonable default based on what they already said and label the match as broad.
+If the user does not answer, gives a short answer, or asks to see cases, proceed with a reasonable default based on what they already said and label the match as broad.
 
 ## If No Good Match Exists
 

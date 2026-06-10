@@ -2,7 +2,7 @@ interface:
   display_name: "奥德赛 Skill"
   short_description: "用真实人生片段陪你看见选择"
   brand_color: "#EA5549"
-  default_prompt: "Use $odyssey-skill to find gentle, real decision stories and podcast sources for my current life fork."
+  default_prompt: "最近有什么选择难到你了吗？"
 
 policy:
   allow_implicit_invocation: true
