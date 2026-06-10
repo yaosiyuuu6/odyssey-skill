@@ -77,7 +77,7 @@ def score_record(query_terms: list[str], record: dict) -> tuple[int, list[str]]:
     return score, matched
 
 
-def search_index(query: str, index: list[dict], limit: int = 5) -> list[dict]:
+def search_index(query: str, index: list[dict], limit: int = 3) -> list[dict]:
     query_terms = tokenize(query)
     scored = []
     for record in index:
@@ -109,48 +109,78 @@ def result_summary(result: dict) -> str:
     return str(result_value)
 
 
+def first_source_link(result: dict) -> str:
+    links = result.get("source_links") or []
+    return links[0] if links else "原始链接暂缺"
+
+
+def clean_clause(value: object, fallback: str) -> str:
+    text = str(value or fallback).strip()
+    return text.rstrip("。；;，, ")
+
+
+def story_paragraph(result: dict) -> str:
+    name = result.get("protagonist_name") or "这位主人公"
+    title = result.get("case_title") or "一段相似经历"
+    scene = clean_clause(result.get("decision_scene"), "一个没有标准答案的路口")
+    choice = clean_clause(result.get("final_choice"), "原文没有明确写出最后选择")
+    cost = clean_clause(result.get("cost"), "原文没有明确写出代价")
+    summary = clean_clause(result_summary(result), "原文没有明确写出后来的结果")
+    matched_dimensions = "、".join(result.get("matched_dimensions", []))
+    if matched_dimensions:
+        similarity = f"我把它放在这里，是因为它和你的处境有这些相近处：{matched_dimensions}。"
+    else:
+        similarity = "我把它放在这里，是因为它至少有一些处境关键词和你相近。"
+    return (
+        f"{title}里，{name}也走到过一个不太容易立刻说清楚的阶段。"
+        f"对方当时面对的是{scene}，真正难的地方不只是做选择本身，"
+        f"也是要承受选择前那种摇摆和不确定。{similarity}"
+        f"后来对方选择了{choice}，这个选择的代价是{cost}。"
+        f"再往后看，{summary}。"
+    )
+
+
 def render_recommendations(query: str, results: list[dict]) -> str:
-    intro = "听起来你现在站在一个需要认真比较代价和可能性的位置。"
+    intro = (
+        "好哦。我无法真正感同身受你此刻的处境，"
+        "但我这里有一些相似的人生片段。它们不是标准答案，"
+        "只是一些真实的人在迷茫里做过的尝试，希望能陪你多看见几种可能。"
+    )
     if not results:
         return (
             f"{intro}\n\n"
-            "我目前在库内没有找到足够相似、且可追溯到来源的案例。"
-            "我不想为了给出推荐而编造播客；你可以补充行业、储蓄周期、裸辞目的和家庭约束后再试一次。"
+            "我这里暂时没有找到足够相近、又能追到来源的案例。"
+            "与其硬凑几个看起来相关的故事，我更愿意先停在这里；"
+            "如果你愿意补一句你最纠结的点，我再帮你重新找。"
         )
     lines = [
         intro,
         "",
-        "你不妨看看这几个人生，希望对你有帮助。",
+        "你可以先看看这几段经历：",
         "",
     ]
     for idx, result in enumerate(results, 1):
-        links = result.get("source_links") or ["原始链接暂缺"]
         lines.extend(
             [
                 f"{idx}. {result.get('case_title')}｜{result.get('protagonist_name')}",
-                f"   - 决策节点：{result.get('decision_scene')} ({result.get('node_id')})",
-                f"   - 相似点：{', '.join(result.get('matched_terms', [])) or '处境关键词相近'}；{', '.join(result.get('matched_dimensions', [])) or '可作为低置信参考'}",
-                f"   - 当时选择：{result.get('final_choice', '原文未提及')}",
-                f"   - 代价：{result.get('cost', '原文未提及')}",
-                f"   - 后来结果：{result_summary(result)}",
-                f"   - 来源：{links[0]}",
-                f"   - 追溯 ID：{result.get('case_id')} / {result.get('protagonist_id')} / {result.get('node_id')}",
+                story_paragraph(result),
+                f"来源：{first_source_link(result)}",
                 "",
             ]
         )
-    lines.append("这不是建议你复制他们的选择，而是帮你比较处境、代价和结果。")
+    lines.append("你不用把这些经历当成要复制的路线，先把它们当成几面镜子就好。")
     return "\n".join(lines)
 
 
 def render_database_unavailable() -> str:
     return (
-        "暂时无法检索奥德赛数据库：远程 GitHub 数据不可用，且本地还没有可用缓存。\n\n"
-        "我不会为了给出推荐而编造播客或人生案例。你可以稍后重试，"
-        "或先确认网络连接和 ODYSSEY_SKILL_REMOTE_BASE_URL 配置。"
+        "我这里暂时连不上奥德赛案例库，也没有可以继续使用的本地缓存。\n\n"
+        "所以这次我不会临时编造案例。你可以稍后再试；如果你愿意，"
+        "也可以先聊聊你现在最卡住的地方，我会只基于你说的内容陪你梳理。"
     )
 
 
-def search_remote(query: str, limit: int = 5, remote_base_url: str | None = None) -> str:
+def search_remote(query: str, limit: int = 3, remote_base_url: str | None = None) -> str:
     fetch_indexes = load_fetch_indexes()
     kwargs = {}
     if remote_base_url:
@@ -169,7 +199,7 @@ def search_remote(query: str, limit: int = 5, remote_base_url: str | None = None
 def main() -> int:
     parser = argparse.ArgumentParser(description="Search Odyssey Skill cloud index.")
     parser.add_argument("query")
-    parser.add_argument("--limit", type=int, default=5)
+    parser.add_argument("--limit", type=int, default=3)
     parser.add_argument("--remote-base-url", default=None)
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()

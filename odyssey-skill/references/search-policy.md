@@ -15,7 +15,7 @@ Results are useful as references, not as recommended choices.
 
 ## If Context Is Missing
 
-Ask concise follow-up questions before searching when the user gives only a broad intention such as “我想裸辞”.
+Ask one concise follow-up question before searching only when the user gives a very broad intention such as “我想裸辞” and there is no clear search angle. Do not ask all missing details at once.
 
 Minimum useful context:
 
@@ -24,6 +24,8 @@ Minimum useful context:
 - savings runway
 - hard constraints
 - what kind of reference they want
+
+If the user does not answer, proceed with a reasonable default based on what they already said and label the match as broad.
 
 ## If No Good Match Exists
 

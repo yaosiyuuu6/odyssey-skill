@@ -53,7 +53,7 @@ def test_search_prioritizes_podcast_and_decision_context():
     assert "决策场景相似" in results[0]["matched_dimensions"]
 
 
-def test_render_recommendations_uses_warm_boundary_language():
+def test_render_recommendations_uses_story_style_without_trace_ids():
     search_odyssey = load_module("search_odyssey")
     results = [
         {
@@ -76,10 +76,18 @@ def test_render_recommendations_uses_warm_boundary_language():
         "大厂产品经理想裸辞，有什么播客吗？", results
     )
 
-    assert "你不妨看看这几个人生，希望对你有帮助" in rendered
-    assert "这不是建议你复制他们的选择" in rendered
+    assert "无法真正感同身受" in rendered
+    assert "相似的人生片段" in rendered
+    assert "Zoe" in rendered
+    assert "对方当时面对的是大厂裸辞" in rendered
+    assert "后来对方选择了离开大厂去澳洲探索" in rendered
+    assert "这个选择的代价是放弃稳定收入" in rendered
     assert "https://podcasts.apple.com/example" in rendered
-    assert "case_01_p01_d01" in rendered
+    assert "。，" not in rendered
+    assert "。。" not in rendered
+    assert "case_01" not in rendered
+    assert "case_01_p01" not in rendered
+    assert "case_01_p01_d01" not in rendered
 
 
 def test_render_database_unavailable_does_not_invent_results():
@@ -87,5 +95,6 @@ def test_render_database_unavailable_does_not_invent_results():
 
     rendered = search_odyssey.render_database_unavailable()
 
-    assert "暂时无法检索奥德赛数据库" in rendered
-    assert "不会为了给出推荐而编造播客" in rendered
+    assert "我这里暂时连不上奥德赛案例库" in rendered
+    assert "不会临时编造案例" in rendered
+    assert "ODYSSEY_SKILL_REMOTE_BASE_URL" not in rendered

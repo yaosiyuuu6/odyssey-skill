@@ -6,7 +6,7 @@ It is built for users who ask questions like:
 
 > 我的背景是大厂产品经理，工作四年，现在想裸辞，有什么推荐的播客吗？
 
-The skill does not tell users what to choose. It searches a published GitHub JSON database, returns traceable decision cases, and answers with a warm but evidence-bounded style.
+The skill does not tell users what to choose. It searches a published GitHub JSON database, returns real decision stories with source links, and answers with a gentle but evidence-bounded style.
 
 ## What It Includes
 
@@ -34,6 +34,7 @@ data/
 - `data/` is the cloud database served through GitHub Raw URLs.
 - Runtime scripts use only the Python standard library.
 - Search indexes are cached locally after first use.
+- The installable skill folder does not embed `data/`; first use needs GitHub Raw access unless cache has already been warmed.
 
 ## Install In Codex
 
@@ -93,6 +94,12 @@ On first run, the script downloads `manifest.json`, `odyssey_search_index.json`,
 https://raw.githubusercontent.com/yaosiyuuu6/odyssey-skill/main
 ```
 
+Warm the local cache after installation:
+
+```bash
+python3 odyssey-skill/scripts/fetch_indexes.py
+```
+
 The default cache directory is:
 
 ```text
@@ -117,6 +124,13 @@ ODYSSEY_SKILL_CACHE_TTL_SECONDS=86400
 ```
 
 Use `ODYSSEY_SKILL_REMOTE_BASE_URL` if you fork this repository or host the JSON data elsewhere.
+
+To verify a custom remote:
+
+```bash
+python3 odyssey-skill/scripts/fetch_indexes.py \
+  --remote-base-url "$ODYSSEY_SKILL_REMOTE_BASE_URL"
+```
 
 ## Data Updates
 
@@ -162,16 +176,18 @@ Expected results:
 
 ## Failure Behavior
 
-If GitHub Raw is unavailable but local cache exists, the skill uses cached data and says so.
+If GitHub Raw is unavailable but local cache exists, the skill uses cached data and mentions that briefly.
 
-If GitHub Raw is unavailable and no cache exists, the skill does not invent recommendations. It returns a clear message:
+If GitHub Raw is unavailable and no cache exists, the skill does not invent recommendations. User-facing search stays brief, while `fetch_indexes.py` prints diagnostic details for setup:
 
 ```text
-暂时无法检索奥德赛数据库：远程 GitHub 数据不可用，且本地还没有可用缓存。
+远程 GitHub 数据暂时不可用，且本地还没有可用缓存。
+remote_base_url=...
+cache_dir=...
 ```
 
 ## Product Boundary
 
 Odyssey Skill provides real decision references, not life advice.
 
-It should recommend traceable cases and podcast sources, explain similarities and differences, and preserve uncertainty. It should not say what the user should choose.
+It should recommend real cases and podcast sources, explain similarities and differences through natural story paragraphs, and preserve uncertainty. It should not say what the user should choose.

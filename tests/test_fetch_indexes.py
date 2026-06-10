@@ -99,5 +99,31 @@ def test_get_indexes_falls_back_to_stale_cache_when_remote_fails(tmp_path):
     )
 
     assert result.cache_status == "stale-cache"
-    assert result.warning == "远程数据库暂时不可用，当前使用本地缓存数据。"
+    assert result.warning == "远程数据暂时没有刷新成功，我先用本地缓存继续。"
     assert result.search_index[0]["node_id"] == "cached-node"
+
+
+def test_get_indexes_reports_diagnostics_when_remote_fails_without_cache(tmp_path):
+    fetch_indexes = load_module("fetch_indexes")
+
+    def fetch_text(url):
+        raise OSError("network down")
+
+    try:
+        fetch_indexes.get_indexes(
+            remote_base_url="https://example.test/base/",
+            cache_dir=tmp_path,
+            ttl_seconds=1,
+            now=2_000_000,
+            fetch_text=fetch_text,
+            verify_sha=False,
+        )
+    except fetch_indexes.RemoteDataUnavailable as error:
+        message = str(error)
+    else:
+        raise AssertionError("expected RemoteDataUnavailable")
+
+    assert "远程 GitHub 数据暂时不可用，且本地还没有可用缓存" in message
+    assert "remote_base_url=https://example.test/base" in message
+    assert f"cache_dir={tmp_path}" in message
+    assert "python3 odyssey-skill/scripts/fetch_indexes.py --remote-base-url https://example.test/base" in message

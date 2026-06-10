@@ -20,7 +20,11 @@ DEFAULT_REMOTE_BASE_URL = os.environ.get(
 )
 DEFAULT_CACHE_DIR = Path(os.environ.get("ODYSSEY_SKILL_CACHE_DIR", "~/.cache/odyssey-skill")).expanduser()
 DEFAULT_TTL_SECONDS = int(os.environ.get("ODYSSEY_SKILL_CACHE_TTL_SECONDS", "86400"))
-CACHE_WARNING = "远程数据库暂时不可用，当前使用本地缓存数据。"
+CACHE_WARNING = "远程数据暂时没有刷新成功，我先用本地缓存继续。"
+
+
+class RemoteDataUnavailable(RuntimeError):
+    """Raised when remote data cannot be fetched and no cache is available."""
 
 
 def fetch_url_text(url: str) -> str:
@@ -93,6 +97,18 @@ def read_cache(cache_dir: Path, cache_status: str, warning: str | None = None):
     )
 
 
+def diagnostic_error(remote_base_url: str, cache_dir: Path, error: Exception) -> RemoteDataUnavailable:
+    normalized_url = normalize_base_url(remote_base_url)
+    return RemoteDataUnavailable(
+        "远程 GitHub 数据暂时不可用，且本地还没有可用缓存。\n"
+        f"remote_base_url={normalized_url}\n"
+        f"cache_dir={cache_dir}\n"
+        f"原始错误：{type(error).__name__}: {error}\n"
+        "可以稍后重试，或先运行："
+        f"python3 odyssey-skill/scripts/fetch_indexes.py --remote-base-url {normalized_url}"
+    )
+
+
 def get_indexes(
     remote_base_url: str = DEFAULT_REMOTE_BASE_URL,
     cache_dir: str | Path = DEFAULT_CACHE_DIR,
@@ -126,10 +142,10 @@ def get_indexes(
             cache_status="refreshed",
             warning=None,
         )
-    except Exception:
+    except Exception as error:
         if cache_files_exist(cache_dir):
             return read_cache(cache_dir, "stale-cache", CACHE_WARNING)
-        raise
+        raise diagnostic_error(remote_base_url, cache_dir, error) from error
 
 
 def main() -> int:
@@ -138,7 +154,11 @@ def main() -> int:
     parser.add_argument("--cache-dir", default=str(DEFAULT_CACHE_DIR))
     parser.add_argument("--ttl-seconds", type=int, default=DEFAULT_TTL_SECONDS)
     args = parser.parse_args()
-    result = get_indexes(args.remote_base_url, args.cache_dir, args.ttl_seconds)
+    try:
+        result = get_indexes(args.remote_base_url, args.cache_dir, args.ttl_seconds)
+    except RemoteDataUnavailable as error:
+        print(error)
+        return 2
     if result.warning:
         print(result.warning)
     print(json.dumps({"cache_status": result.cache_status, "database_version": result.manifest.get("database_version")}, ensure_ascii=False))
