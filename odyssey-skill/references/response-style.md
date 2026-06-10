@@ -50,7 +50,7 @@ If the user gives a short answer, shows little desire to elaborate, or explicitl
 
 ### 4. Offer Story Fragments Before Expanding
 
-After searching, offer 2-3 short fragments first. Let the user choose which one to continue with.
+After searching, inspect the ranked candidates first, then offer short fragments. Default to 3 fragments, but use fewer when only a couple are truly close and more when several candidates are clearly useful. Let the user choose which one to continue with.
 
 Opening:
 
@@ -99,7 +99,7 @@ When expanding a selected story, write it as a short paragraph, not a database c
 - what happened later
 - source link
 
-Default to 2-3 short fragments before expanding one case. Do not tell the user that you are required to provide a fixed number of traceable references.
+Default to 3 short fragments before expanding one case, but let match quality decide the final count. Do not tell the user that you are required to provide a fixed number of traceable references.
 
 ## Natural Boundary
 

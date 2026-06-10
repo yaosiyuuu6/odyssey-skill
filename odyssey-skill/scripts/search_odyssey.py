@@ -25,6 +25,9 @@ KEYWORD_ALIASES = {
     "家庭": ["家庭", "配偶", "父母", "孩子", "房贷"],
 }
 
+DEFAULT_CANDIDATE_LIMIT = 6
+DEFAULT_DISPLAY_LIMIT = 3
+
 
 def load_fetch_indexes():
     path = SCRIPT_DIR / "fetch_indexes.py"
@@ -98,6 +101,21 @@ def search_index(query: str, index: list[dict], limit: int = 3) -> list[dict]:
         reverse=True,
     )
     return scored[:limit]
+
+
+def select_candidate_results(
+    query: str,
+    index: list[dict],
+    candidate_limit: int = DEFAULT_CANDIDATE_LIMIT,
+    default_display_limit: int = DEFAULT_DISPLAY_LIMIT,
+) -> dict:
+    candidates = search_index(query, index, limit=candidate_limit)
+    return {
+        "candidate_limit": candidate_limit,
+        "default_display_limit": default_display_limit,
+        "candidates": candidates,
+        "recommended_results": candidates[:default_display_limit],
+    }
 
 
 def result_summary(result: dict) -> str:
@@ -180,7 +198,12 @@ def render_database_unavailable() -> str:
     )
 
 
-def search_remote(query: str, limit: int = 3, remote_base_url: str | None = None) -> str:
+def search_remote(
+    query: str,
+    limit: int = DEFAULT_DISPLAY_LIMIT,
+    remote_base_url: str | None = None,
+    candidate_limit: int = DEFAULT_CANDIDATE_LIMIT,
+) -> str:
     fetch_indexes = load_fetch_indexes()
     kwargs = {}
     if remote_base_url:
@@ -189,7 +212,13 @@ def search_remote(query: str, limit: int = 3, remote_base_url: str | None = None
         indexes = fetch_indexes.get_indexes(**kwargs)
     except Exception:
         return render_database_unavailable()
-    results = search_index(query, indexes.search_index, limit=limit)
+    selection = select_candidate_results(
+        query,
+        indexes.search_index,
+        candidate_limit=candidate_limit,
+        default_display_limit=limit,
+    )
+    results = selection["recommended_results"]
     rendered = render_recommendations(query, results)
     if indexes.warning:
         rendered = f"{indexes.warning}\n\n{rendered}"
@@ -199,7 +228,8 @@ def search_remote(query: str, limit: int = 3, remote_base_url: str | None = None
 def main() -> int:
     parser = argparse.ArgumentParser(description="Search Odyssey Skill cloud index.")
     parser.add_argument("query")
-    parser.add_argument("--limit", type=int, default=3)
+    parser.add_argument("--limit", type=int, default=DEFAULT_DISPLAY_LIMIT)
+    parser.add_argument("--candidate-limit", type=int, default=DEFAULT_CANDIDATE_LIMIT)
     parser.add_argument("--remote-base-url", default=None)
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
@@ -212,7 +242,13 @@ def main() -> int:
     except Exception:
         print(render_database_unavailable())
         return 2
-    results = search_index(args.query, indexes.search_index, args.limit)
+    selection = select_candidate_results(
+        args.query,
+        indexes.search_index,
+        candidate_limit=args.candidate_limit,
+        default_display_limit=args.limit,
+    )
+    results = selection["candidates"] if args.json else selection["recommended_results"]
     if args.json:
         print(json.dumps(results, ensure_ascii=False, indent=2))
     else:
