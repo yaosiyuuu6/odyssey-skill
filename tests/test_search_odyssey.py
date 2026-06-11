@@ -103,10 +103,10 @@ def test_render_database_unavailable_does_not_invent_results():
     assert "ODYSSEY_SKILL_REMOTE_BASE_URL" not in rendered
 
 
-def test_select_candidate_results_fetches_six_and_recommends_three_by_default():
+def test_select_candidate_results_fetches_thirty_and_recommends_three_by_default():
     search_odyssey = load_module("search_odyssey")
     index = []
-    for idx in range(8):
+    for idx in range(35):
         index.append(
             {
                 "case_id": f"case_{idx}",
@@ -130,19 +130,118 @@ def test_select_candidate_results_fetches_six_and_recommends_three_by_default():
         index,
     )
 
-    assert len(selection["candidates"]) == 6
+    assert len(selection["candidates"]) == 30
     assert len(selection["recommended_results"]) == 3
-    assert selection["candidate_limit"] == 6
+    assert selection["candidate_limit"] == 30
     assert selection["default_display_limit"] == 3
     assert selection["recommended_results"] == selection["candidates"][:3]
 
 
-def test_cli_json_returns_six_candidates_from_cache(tmp_path):
+def test_search_diversifies_cases_before_returning_second_node_from_same_case():
+    search_odyssey = load_module("search_odyssey")
+    index = []
+    for idx in range(4):
+        index.append(
+            {
+                "case_id": "case_long",
+                "case_title": "长案例",
+                "protagonist_id": "p_long",
+                "protagonist_name": "长案例主人公",
+                "node_id": f"long_{idx}",
+                "decision_scene": "大厂裸辞",
+                "cost": "放弃稳定收入",
+                "result": {"短期": "继续探索"},
+                "source_links": ["https://podcasts.apple.com/example"],
+                "is_podcast_recommendable": True,
+                "searchable_text": "大厂 裸辞",
+                "search_tags": ["大厂", "裸辞"],
+                "match_dimensions": ["决策场景相似"],
+            }
+        )
+    for case_id in ["case_b", "case_c"]:
+        index.append(
+            {
+                "case_id": case_id,
+                "case_title": "短案例",
+                "protagonist_id": f"p_{case_id}",
+                "protagonist_name": "短案例主人公",
+                "node_id": f"{case_id}_node",
+                "decision_scene": "大厂裸辞",
+                "cost": "放弃稳定收入",
+                "result": {"短期": "继续探索"},
+                "source_links": ["https://podcasts.apple.com/example"],
+                "is_podcast_recommendable": True,
+                "searchable_text": "大厂 裸辞",
+                "search_tags": ["大厂", "裸辞"],
+                "match_dimensions": ["决策场景相似"],
+            }
+        )
+
+    results = search_odyssey.search_index("大厂裸辞", index, limit=5)
+
+    assert len({item["case_id"] for item in results[:3]}) == 3
+    assert [item["case_id"] for item in results].count("case_long") == 3
+
+
+def test_stable_tie_breaker_does_not_keep_input_order_for_equal_scores():
+    search_odyssey = load_module("search_odyssey")
+    index = [
+        {
+            "case_id": f"case_{idx}",
+            "case_title": f"案例 {idx}",
+            "protagonist_id": f"p_{idx}",
+            "protagonist_name": f"主人公 {idx}",
+            "node_id": f"n_{idx}",
+            "decision_scene": "大厂裸辞",
+            "cost": "放弃稳定收入",
+            "result": {"短期": "继续探索"},
+            "source_links": ["https://podcasts.apple.com/example"],
+            "is_podcast_recommendable": True,
+            "searchable_text": "大厂 裸辞",
+            "search_tags": ["大厂", "裸辞"],
+            "match_dimensions": ["决策场景相似"],
+        }
+        for idx in range(10)
+    ]
+
+    results = search_odyssey.search_index("大厂裸辞", index, limit=10)
+
+    assert [item["node_id"] for item in results] != [item["node_id"] for item in index]
+
+
+def test_json_results_include_ranking_evidence_and_hints():
+    search_odyssey = load_module("search_odyssey")
+    index = [
+        {
+            "case_id": "case_a",
+            "case_title": "大厂裸辞来澳洲",
+            "protagonist_id": "p_a",
+            "protagonist_name": "A",
+            "node_id": "n_a",
+            "decision_scene": "大厂裸辞",
+            "cost": "放弃稳定收入",
+            "result": {"短期": "收入不稳定"},
+            "source_links": ["https://podcasts.apple.com/example"],
+            "is_podcast_recommendable": True,
+            "searchable_text": "大厂 产品经理 裸辞",
+            "search_tags": ["大厂", "裸辞"],
+            "match_dimensions": ["决策场景相似", "风险代价相似"],
+            "ranking_evidence": {"decision_scene": "大厂裸辞", "cost": "放弃稳定收入"},
+        }
+    ]
+
+    results = search_odyssey.search_index("大厂裸辞", index, limit=1)
+
+    assert results[0]["ranking_evidence"]["decision_scene"] == "大厂裸辞"
+    assert results[0]["rank_hints"]["case_diversity"] == "first_node_for_case"
+
+
+def test_cli_json_returns_thirty_candidates_from_cache(tmp_path):
     root = Path(__file__).resolve().parents[1]
     cache_dir = tmp_path / "cache"
     cache_dir.mkdir()
     search_index = []
-    for idx in range(8):
+    for idx in range(35):
         search_index.append(
             {
                 "case_id": f"case_{idx}",
@@ -184,4 +283,4 @@ def test_cli_json_returns_six_candidates_from_cache(tmp_path):
     )
 
     results = json.loads(completed.stdout)
-    assert len(results) == 6
+    assert len(results) == 30
