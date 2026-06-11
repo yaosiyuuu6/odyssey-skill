@@ -23,8 +23,8 @@ Use this skill when the user asks questions like:
 3. If the user keeps expressing their situation, keep listening and ask one gentle follow-up. Do not interrupt with search results.
 4. If the user gives a short answer, shows little need to continue expressing, or asks to see cases, move into search.
 5. Before searching, frame it as looking at stories together: “好，那我先往‘想停下来，但现实压力还在’的方向找几个真实故事。我们不急着下结论，先一起看看别人是怎么走过这段的。”
-6. Search the cloud index with `scripts/search_odyssey.py`.
-7. First offer 2-3 short story fragments and let the user choose which one to continue with. Avoid database-card language.
+6. Search the cloud index with `scripts/search_odyssey.py --json` to inspect up to 6 candidate cases before choosing what to show.
+7. First offer a few short story fragments and let the user choose which one to continue with. Default to 3 fragments, but show fewer when matches are weak and more when several candidates are genuinely close. Avoid database-card language.
 8. When expanding a story, tell what they faced, why it was uncertain, what they tried, what it cost, what happened later, and where to listen/read.
 9. End by pointing back to the full source rather than forcing the user to summarize themselves.
 
@@ -33,8 +33,10 @@ Use this skill when the user asks questions like:
 Run from the skill directory or with an absolute path:
 
 ```bash
-python3 scripts/search_odyssey.py "大厂产品经理 工作四年 想裸辞 推荐播客"
+python3 scripts/search_odyssey.py "大厂产品经理 工作四年 想裸辞 推荐播客" --json
 ```
+
+JSON mode returns up to 6 ranked candidates by default. Use those candidates as the evidence pool, then choose the most relevant stories for the user-facing answer. Normal prose usually shows 3 fragments, but the number can vary with match quality.
 
 Optional environment variables:
 

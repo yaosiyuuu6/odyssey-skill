@@ -208,5 +208,315 @@
     "url": "https://www.bilibili.com/video/BV1B5xkzPEhx?buvid=YA40F0AE39ABA9AB42E7B1E2D80CAFC1C876&from_spmid=main.space-contribution.0.0&is_story_h5=false&mid=gnGAC9eQx1d870r8XEhf7w==&plat_id=114&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=C5B7081A-06B3-4B4F-B8CA-A54CF185A27C&share_source=COPY&share_tag=s_i&timestamp=1780288350&unique_k=qco4jci&up_id=538596213&vd_source=11329ac32dfe6835df8ca4bd0b3825f2",
     "is_podcast": false,
     "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:podcast_21",
+    "case_id": "case_21",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "E83 对话朱萧木 顶级主播如何炼成 一个走过创业四季和生死的电商人故事",
+    "url": "https://www.xiaoyuzhoufm.com/episode/67ed0567f9578163d6929b77?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_22",
+    "case_id": "case_22",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "144. 对阳萌的4小时访谈 消费电子死与生 第三类公司 端侧模型 产品方法 游戏模",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a2543dcb30e1571aea20d0b?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_23",
+    "case_id": "case_23",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "S9E4 鲁豫对话蒙曼 生命不要早知如此 我决定更勇敢",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a27f68a41404ca3b66736b6?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_24",
+    "case_id": "case_24",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "91.天才女友 世界就是草台班子 你还不敢上",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a1e78f77460cabdeb59cfa0?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_25",
+    "case_id": "case_25",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "EP94 從30年前的矽谷说起 Google 职涯选择 育兒 退休 - Podcas",
+    "url": "https://open.firstory.me/story/cmpm9l6a5010x01p528xs67ck",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_26",
+    "case_id": "case_26",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "S9E3 鲁豫对话蔡皋 我本布衣 种花种草种春天",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a1eb4cc7444b57222322dcf?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_27",
+    "case_id": "case_27",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "在海外办中文脱口秀 能活吗 付航 杨笠 澳洲喊你回家吃饭 对话团子",
+    "url": "https://www.xiaoyuzhoufm.com/episode/69f733c4f93890ea812c1410?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_28",
+    "case_id": "case_28",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "S9E2 鲁豫对话张诺 我不优秀 但我依然是一个胜利者",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a1546f3ff7b9a8c0a5b56fe?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_29",
+    "case_id": "case_29",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "89.天才女友 做好准备 迎接你的第二个青春期",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a0fc2671b7bd502959d892c?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_30",
+    "case_id": "case_30",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "S9E1 鲁豫对话张赞英 那朵叫 赞英 的花",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a0be7321b7bd502956b80cb?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_31",
+    "case_id": "case_31",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "88.武林高手 接受质疑否定 还是破局成事 肯德基前公关高管有高招",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a0d1532e1eb34a939bb3280?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_32",
+    "case_id": "case_32",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "140. 对姚顺宇的4小时访谈 请允许我小疯一下 在Anthropic和Gemini",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a00aa051b7bd50295dfe41d?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_33",
+    "case_id": "case_33",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "S8E9 鲁豫对话李睿 我只是一名记者 留在了战争发生的地方",
+    "url": "https://www.xiaoyuzhoufm.com/episode/69bf524c2d318777c9169361?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_34",
+    "case_id": "case_34",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "87.天才女友 不求被爱 好好自爱",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6a041c91e1eb34a9394f9b08?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_35",
+    "case_id": "case_35",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "从央视纪录片到爆款 AI 短剧 第一批 转身 的导演 S10E11",
+    "url": "https://guiguzaozhidao.fireside.fm/20240424",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_36",
+    "case_id": "case_36",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "E78 对话影石 Think bold 勇敢的人先享受世界",
+    "url": "https://www.xiaoyuzhoufm.com/episode/6717b6990d2f24f2890e5f0e?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_37",
+    "case_id": "case_37",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "优化胜率而非赔率 把一件事做到理论上该有的样子 对谈连续创业者 Albert",
+    "url": "https://www.xiaoyuzhoufm.com/episode/69abf2cec8cdeb38c24b2038?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_38",
+    "case_id": "case_38",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "S8E8 鲁豫对话张虹 冰场上的向日葵 日复一日 向光疯长",
+    "url": "https://www.xiaoyuzhoufm.com/episode/698b3e7466e2c30377dcfa2e?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:podcast_39",
+    "case_id": "case_39",
+    "source_type": "podcast",
+    "platform": "Other",
+    "title": "自我进化论 No.75 母女关系 我们一生剧本的隐喻",
+    "url": "https://www.xiaoyuzhoufm.com/episode/68dd0b088e321a0d6f9a08f2?utm_source=rss",
+    "is_podcast": true,
+    "is_recommendable_for_skill": true
+  },
+  {
+    "source_id": "case3:bilibili_40",
+    "case_id": "case_40",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "三年没见的前同事离职后跟我说 我再也不想上班了",
+    "url": "https://www.bilibili.com/video/BV1inE46EExQ",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_41",
+    "case_id": "case_41",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "候场 对话俞丽拿 来不及孤独 视频播客",
+    "url": "https://www.bilibili.com/video/BV13mVS6hEKj",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_43",
+    "case_id": "case_43",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "陈刚 在药厂做食品 我赌了一条没人敢走的路",
+    "url": "https://www.bilibili.com/video/BV1MHVh6iE6C",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_44",
+    "case_id": "case_44",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "候场 对话演员陈龙 回到人间烟火 视频播客",
+    "url": "https://www.bilibili.com/video/BV1mh5R66EtM",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_46",
+    "case_id": "case_46",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "跟三个中登朋友 聊聊人到中年的焦虑与变化",
+    "url": "https://www.bilibili.com/video/BV1cZG26PEEy",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_47",
+    "case_id": "case_47",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "候场 对话梁永安 抓住人生的决定性瞬间 视频播客",
+    "url": "https://www.bilibili.com/video/BV1gMZFBcEoh",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_48",
+    "case_id": "case_48",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "候场 对话鲁肃 让京剧叛逆一回 视频播客",
+    "url": "https://www.bilibili.com/video/BV1kHDXB1E8n",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_49",
+    "case_id": "case_49",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "急诊医生卢骁 为了救人 我们给病人灌了10瓶二锅头",
+    "url": "https://www.bilibili.com/video/BV13CLq6YEbN",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_50",
+    "case_id": "case_50",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "候场 对话石倚洁 那些跨过的山 视频播客",
+    "url": "https://www.bilibili.com/video/BV1T2XQBtEim",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_51",
+    "case_id": "case_51",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "正片 郑执 罗永浩 总是赶末班车的人 可以改进时间管理......也可以拥有一辆属于",
+    "url": "https://www.bilibili.com/video/BV1wqLm67EY6",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_52",
+    "case_id": "case_52",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "候场 对话83岁配音艺术家乔榛 如何老去 视频播客",
+    "url": "https://www.bilibili.com/video/BV1ZCwJzrE1E",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
+  },
+  {
+    "source_id": "case3:bilibili_53",
+    "case_id": "case_53",
+    "source_type": "bilibili",
+    "platform": "Bilibili",
+    "title": "那年风口 我从军工转行IC设计",
+    "url": "https://www.bilibili.com/video/BV1d99fBfE6Z",
+    "is_podcast": false,
+    "is_recommendable_for_skill": false
   }
 ]

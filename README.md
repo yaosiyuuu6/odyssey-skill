@@ -1,27 +1,47 @@
+<div align="center">
+
 # Odyssey Skill / 奥德赛.skill
 
-![Odyssey Skill cover](assets/cover-odyssey.png)
+<img src="assets/cover-odyssey.png" alt="Odyssey Skill cover">
 
-> 每个人都在自己的奥德赛。
->
-> 在他人的旅程里，找到你的下一步。
->
-> *Every life is an odyssey.*
->
-> *Find your next step in stories already lived.*
+<p>
+  每个人都在自己的奥德赛。<br>
+  在他人的旅程里，找到你的下一步。
+</p>
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blue.svg)
-![Codex](https://img.shields.io/badge/Codex-Skill-black.svg)
-![Python](https://img.shields.io/badge/Python-stdlib-yellow.svg)
+<p>
+  <em>Every life is an odyssey.</em><br>
+  <em>Find your next step in stories already lived.</em>
+</p>
 
-Odyssey Skill is an installable AI-agent skill for finding real life-decision reference cases and podcast sources from the Odyssey Map case library.
+<p>
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg">
+  <img alt="Agent Skills" src="https://img.shields.io/badge/Agent%20Skills-Compatible-blue.svg">
+  <img alt="Codex" src="https://img.shields.io/badge/Codex-Skill-black.svg">
+  <img alt="Python" src="https://img.shields.io/badge/Python-stdlib-yellow.svg">
+</p>
 
-它不替你做决定，也不把人生问题压成建议清单。它会从真实的人生选择故事里，找到与你处境相近的路径、约束、代价和结果，让你在别人的旅程里看见自己的下一步。
+<p>
+  Odyssey Skill is an installable AI-agent skill for finding real life-decision reference cases and podcast sources from the Odyssey Map case library.
+</p>
 
-Built for Codex, Claude Code, and other Agent Skills-compatible runtimes. The skill searches a published GitHub JSON database, returns real decision stories with source links, and answers with a gentle but evidence-bounded style.
+<p>
+  它不替你做决定，也不把人生问题压成建议清单。它会从真实的人生选择故事里，找到与你处境相近的路径、约束、代价和结果，让你在别人的旅程里看见自己的下一步。
+</p>
 
-[效果示例](#效果示例) · [安装](#install-in-codex) · [数据来源](#data-updates) · [工作原理](#what-it-includes) · [边界](#product-boundary)
+<p>
+  Built for Codex, Claude Code, and other Agent Skills-compatible runtimes. The skill searches a published GitHub JSON database, returns real decision stories with source links, and answers with a gentle but evidence-bounded style.
+</p>
+
+<p>
+  <a href="#效果示例">效果示例</a> ·
+  <a href="#install-in-codex">安装</a> ·
+  <a href="#data-updates">数据来源</a> ·
+  <a href="#what-it-includes">工作原理</a> ·
+  <a href="#product-boundary">边界</a>
+</p>
+
+</div>
 
 ---
 
