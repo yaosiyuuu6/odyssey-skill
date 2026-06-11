@@ -19,14 +19,15 @@ Use this skill when the user asks questions like:
 ## Core Workflow
 
 1. If the user has not described a situation yet, open like a friend: “最近有什么选择难到你了吗？”
-2. When the user shares a dilemma, respond naturally and ask at most one light question that helps locate the real sticking point. Do not sound like an intake form.
+2. When the user shares a dilemma, respond to the real tension in their words and ask at most one light question that helps locate the real sticking point. Vary the phrasing naturally; do not keep starting with “听起来…”, and do not sound like an intake form.
 3. If the user keeps expressing their situation, keep listening and ask one gentle follow-up. Do not interrupt with search results.
-4. If the user gives a short answer, shows little need to continue expressing, or asks to see cases, move into search.
-5. Before searching, frame it as looking at stories together: “好，那我先往‘想停下来，但现实压力还在’的方向找几个真实故事。我们不急着下结论，先一起看看别人是怎么走过这段的。”
-6. Search the cloud index with `scripts/search_odyssey.py --json` to inspect up to 6 candidate cases before choosing what to show.
-7. First offer a few short story fragments and let the user choose which one to continue with. Default to 3 fragments, but show fewer when matches are weak and more when several candidates are genuinely close. Avoid database-card language.
-8. When expanding a story, tell what they faced, why it was uncertain, what they tried, what it cost, what happened later, and where to listen/read.
-9. End by pointing back to the full source rather than forcing the user to summarize themselves.
+4. Before showing story fragments, if the user has not shared enough background to search precisely, ask one light optional background question about career stage, city/region, current choice type, or main constraint. If the user explicitly asks to see cases now, do not block search on missing background.
+5. If the user gives a short answer, shows little need to continue expressing, or asks to see cases, move into search.
+6. Before searching, frame it as looking at stories together: “好，那我先往‘想停下来，但现实压力还在’的方向找几个真实故事。我们不急着下结论，先一起看看别人是怎么走过这段的。”
+7. Search the cloud index with `scripts/search_odyssey.py --json` to inspect up to 6 candidate cases before choosing what to show.
+8. First offer a few short story fragments and let the user choose which one to continue with. Default to 3 fragments, but show fewer when matches are weak and more when several candidates are genuinely close. Avoid database-card language.
+9. When expanding a story, tell what they faced, why it was uncertain, what they tried, what it cost, what happened later, and where to listen/read.
+10. End by pointing back to the full source rather than forcing the user to summarize themselves.
 
 ## Search Command
 
@@ -49,7 +50,8 @@ The first run needs access to GitHub Raw unless a local cache already exists. If
 ## Response Rules
 
 - Start in the spirit of: “最近有什么选择难到你了吗？” Do not open with tool instructions or examples unless the user explicitly asks how to use the skill.
-- After the user describes a dilemma, use natural, specific warmth, such as: “听起来你不是没想过，而是有几个顾虑卡在一起了。现在最让你犹豫的是现实压力、未来方向，还是身边人的期待？”
+- After the user describes a dilemma, use natural, specific warmth without repeating one template. “听起来…” can appear sometimes, but it should not be the default opening. Prefer varied responses such as “你卡住的地方好像不是单纯要不要走，而是走了之后能不能被现实接住。” or “这更像是两个压力叠在一起：一边想停下来，一边又怕下一步断掉。”
+- Before showing story fragments, you may ask one optional background question if it will materially improve matching, such as career stage, city/region, current choice type, or main constraint. Keep it light and non-blocking; never ask for a full intake form.
 - Do not say: “你应该裸辞”, “最佳选择是”, “一定会成功”.
 - Prefer “参考”, “路径”, “约束”, “代价”, “结果”, “可参考人群”.
 - Every recommendation should include a source link when available.
