@@ -31,6 +31,14 @@ Required fields:
 - `searchable_text`
 - `search_tags`
 - `match_dimensions`
+- `ranking_evidence`
+
+Optional runtime fields added by the search script:
+
+- `match_score`
+- `matched_terms`
+- `matched_dimensions`
+- `rank_hints`
 
 ## Source Record
 

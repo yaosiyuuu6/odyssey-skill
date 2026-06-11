@@ -43,6 +43,27 @@ def clean_text(value: Any) -> str:
     return str(value)
 
 
+def clean_search_text(value: Any) -> str:
+    """Flatten values for search without schema labels or unknown placeholders."""
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        text = " ".join(value.split())
+        return "" if not text or text == UNKNOWN else text
+    if isinstance(value, list):
+        return " ".join(part for item in value if (part := clean_search_text(item)))
+    if isinstance(value, dict):
+        return " ".join(part for item in value.values() if (part := clean_search_text(item)))
+    return str(value)
+
+
+def compact_evidence(value: Any, max_length: int = 180) -> str:
+    text = clean_search_text(value)
+    if len(text) <= max_length:
+        return text
+    return text[: max_length - 1].rstrip() + "…"
+
+
 def is_podcast(source_links: list[str], source_ids: list[str]) -> bool:
     text = " ".join(source_links + source_ids).lower()
     return "podcast" in text or "podcasts.apple.com" in text
@@ -89,6 +110,17 @@ def infer_dimensions(node: dict[str, Any], tags: list[str]) -> list[str]:
     if any(tag in tags for tag in ["大厂", "留学", "创业", "海外生活"]):
         dimensions.append("职业阶段相似")
     return dimensions
+
+
+def ranking_evidence_for(node: dict[str, Any]) -> dict[str, str]:
+    return {
+        "decision_scene": compact_evidence(node.get("decision_scene")),
+        "constraints": compact_evidence(node.get("当时约束")),
+        "cost": compact_evidence(node.get("代价")),
+        "action_path": compact_evidence(node.get("行动路径")),
+        "result": compact_evidence(node.get("结果")),
+        "reference_group": compact_evidence(node.get("可参考人群")),
+    }
 
 
 def sha256_json(value: Any) -> str:
@@ -139,25 +171,26 @@ def build_indexes(
                     case_title,
                     protagonist_name,
                     identity,
-                    clean_text(profile),
-                    clean_text(node.get("decision_scene")),
-                    clean_text(node.get("stage_at_decision")),
-                    clean_text(node.get("age_at_decision")),
-                    clean_text(node.get("location_at_decision")),
-                    clean_text(node.get("人物背景")),
-                    clean_text(node.get("当时约束")),
-                    clean_text(node.get("备选项")),
-                    clean_text(node.get("最终选择")),
-                    clean_text(node.get("行动路径")),
-                    clean_text(node.get("结果")),
-                    clean_text(node.get("代价")),
-                    clean_text(node.get("关键变量")),
-                    clean_text(node.get("可参考人群")),
-                    clean_text(source_ids),
-                    clean_text(source_links),
+                    clean_search_text(profile),
+                    clean_search_text(node.get("decision_scene")),
+                    clean_search_text(node.get("stage_at_decision")),
+                    clean_search_text(node.get("age_at_decision")),
+                    clean_search_text(node.get("location_at_decision")),
+                    clean_search_text(node.get("人物背景")),
+                    clean_search_text(node.get("当时约束")),
+                    clean_search_text(node.get("备选项")),
+                    clean_search_text(node.get("最终选择")),
+                    clean_search_text(node.get("行动路径")),
+                    clean_search_text(node.get("结果")),
+                    clean_search_text(node.get("代价")),
+                    clean_search_text(node.get("关键变量")),
+                    clean_search_text(node.get("可参考人群")),
+                    clean_search_text(source_ids),
+                    clean_search_text(source_links),
                 ]
                 searchable_text = " ".join(part for part in searchable_parts if part)
                 tags = infer_tags(searchable_text)
+                ranking_evidence = ranking_evidence_for(node)
                 search_index.append(
                     {
                         "case_id": case_id,
@@ -182,6 +215,7 @@ def build_indexes(
                         "searchable_text": searchable_text,
                         "search_tags": tags,
                         "match_dimensions": infer_dimensions(node, tags),
+                        "ranking_evidence": ranking_evidence,
                     }
                 )
 

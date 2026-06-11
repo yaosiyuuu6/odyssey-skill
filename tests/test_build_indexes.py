@@ -86,3 +86,60 @@ def test_build_indexes_creates_node_and_source_indexes():
     assert manifest["database_version"] == "2026-06-09.1"
     assert manifest["files"]["odyssey_search_index"]["record_count"] == 1
     assert manifest["files"]["source_index"]["record_count"] == 1
+
+
+def test_tag_inference_ignores_field_names_and_unknown_values():
+    build_indexes = load_module("build_indexes")
+    cases = [
+        {
+            "case_id": "case_01",
+            "case_title": "缺少个人背景信息的选择",
+            "source_links": ["https://example.com/article"],
+            "source_ids": ["main:article_001"],
+            "protagonists": [
+                {
+                    "protagonist_id": "case_01_p01",
+                    "name": "A",
+                    "identity": "内容创作者",
+                    "profile": {
+                        "城市": "原文未提及",
+                        "家庭资源": "原文未提及",
+                        "行业": "内容创作",
+                    },
+                    "decision_nodes": [
+                        {
+                            "node_id": "case_01_p01_d01",
+                            "decision_scene": "要不要继续做内容项目",
+                            "当时约束": ["原文未提及"],
+                            "备选项": {"A": "继续", "B": "暂停"},
+                            "最终选择": "继续尝试。",
+                            "行动路径": ["复盘选题"],
+                            "结果": {"短期": "原文未提及"},
+                            "代价": "原文未提及",
+                            "关键变量": [],
+                            "可参考人群": "内容创作者。",
+                        }
+                    ],
+                }
+            ],
+        }
+    ]
+
+    result = build_indexes.build_indexes(cases)
+
+    record = result["odyssey_search_index"][0]
+    assert "城市选择" not in record["search_tags"]
+    assert "家庭约束" not in record["search_tags"]
+    assert "原文未提及" not in record["searchable_text"]
+
+
+def test_tag_inference_keeps_explicit_rich_tags_from_values():
+    build_indexes = load_module("build_indexes")
+    result = build_indexes.build_indexes(sample_cases())
+
+    tags = result["odyssey_search_index"][0]["search_tags"]
+
+    assert "裸辞" in tags
+    assert "大厂" in tags
+    assert "海外生活" in tags
+    assert "城市选择" in tags

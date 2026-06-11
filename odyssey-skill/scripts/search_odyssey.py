@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import importlib.util
 import json
 import re
@@ -25,8 +26,9 @@ KEYWORD_ALIASES = {
     "家庭": ["家庭", "配偶", "父母", "孩子", "房贷"],
 }
 
-DEFAULT_CANDIDATE_LIMIT = 6
+DEFAULT_CANDIDATE_LIMIT = 30
 DEFAULT_DISPLAY_LIMIT = 3
+UNKNOWN = "原文未提及"
 
 
 def load_fetch_indexes():
@@ -75,12 +77,28 @@ def score_record(query_terms: list[str], record: dict) -> tuple[int, list[str]]:
     if any(term.lower() in scene for term in matched):
         score += 4
     cost = str(record.get("cost", "")).lower()
-    if any(term in matched for term in ["裸辞", "创业", "留学", "海外"]) and cost:
+    if any(term in matched for term in ["裸辞", "创业", "留学", "海外"]) and cost and cost != UNKNOWN:
         score += 2
     return score, matched
 
 
-def search_index(query: str, index: list[dict], limit: int = 3) -> list[dict]:
+def stable_tie_breaker(query: str, record: dict) -> int:
+    key = f"{query}\0{record.get('case_id', '')}\0{record.get('node_id', '')}"
+    return int(hashlib.sha256(key.encode("utf-8")).hexdigest()[:12], 16)
+
+
+def default_ranking_evidence(record: dict) -> dict:
+    return {
+        "decision_scene": record.get("decision_scene", ""),
+        "constraints": record.get("constraints", []),
+        "cost": record.get("cost", ""),
+        "action_path": record.get("action_path", []),
+        "result": record.get("result", {}),
+        "reference_group": record.get("reference_group", ""),
+    }
+
+
+def sorted_scored_records(query: str, index: list[dict]) -> list[dict]:
     query_terms = tokenize(query)
     scored = []
     for record in index:
@@ -91,16 +109,62 @@ def search_index(query: str, index: list[dict], limit: int = 3) -> list[dict]:
         item["match_score"] = score
         item["matched_terms"] = matched
         item["matched_dimensions"] = record.get("match_dimensions", [])[:3]
+        item["ranking_evidence"] = record.get("ranking_evidence") or default_ranking_evidence(record)
+        item["_tie_breaker"] = stable_tie_breaker(query, record)
         scored.append(item)
     scored.sort(
         key=lambda item: (
             item["match_score"],
             bool(item.get("is_podcast_recommendable")),
             len(item.get("source_links", [])),
+            item["_tie_breaker"],
         ),
         reverse=True,
     )
-    return scored[:limit]
+    return scored
+
+
+def diversify_by_case(scored: list[dict], limit: int) -> list[dict]:
+    by_case: dict[str, list[dict]] = {}
+    case_order: list[str] = []
+    for item in scored:
+        case_id = str(item.get("case_id", ""))
+        if case_id not in by_case:
+            by_case[case_id] = []
+            case_order.append(case_id)
+        by_case[case_id].append(item)
+
+    results: list[dict] = []
+    round_index = 0
+    while len(results) < limit:
+        added = False
+        for case_id in case_order:
+            case_items = by_case[case_id]
+            if round_index >= len(case_items):
+                continue
+            item = dict(case_items[round_index])
+            item.pop("_tie_breaker", None)
+            item["rank_hints"] = {
+                "case_diversity": "first_node_for_case" if round_index == 0 else "additional_node_for_case",
+                "case_round": round_index + 1,
+                "rerank_guidance": (
+                    "Agent should rerank candidates by decision scene, constraints, cost, "
+                    "action path, result, source quality, and diversity."
+                ),
+            }
+            results.append(item)
+            added = True
+            if len(results) >= limit:
+                break
+        if not added:
+            break
+        round_index += 1
+    return results
+
+
+def search_index(query: str, index: list[dict], limit: int = 3) -> list[dict]:
+    scored = sorted_scored_records(query, index)
+    return diversify_by_case(scored, limit)
 
 
 def select_candidate_results(

@@ -89,9 +89,9 @@ odyssey-skill/
 用户侧搜索脚本：
 
 - `fetch_indexes.py`：拉取远端索引并写入本地缓存。
-- `search_odyssey.py`：根据用户处境搜索真实案例。
+- `search_odyssey.py`：根据用户处境广召回真实案例；JSON 默认返回 30 条多样化候选，按 case 分轮补位，附带 `ranking_evidence` 和 `rank_hints` 供 Agent 最终 rerank。
 - `validate_remote_data.py`：验证发布数据契约。
-- `build_indexes.py`：由 `decision_storylines_v2.json` 生成 manifest、搜索索引和来源索引。
+- `build_indexes.py`：由 `decision_storylines_v2.json` 生成 manifest、搜索索引和来源索引；构建搜索文本时不把字段名和 `原文未提及` 用作标签触发词，并为每个节点输出 `ranking_evidence`。
 
 ## 内部采集与生成脚本
 
@@ -166,6 +166,13 @@ python3 odyssey-skill/scripts/validate_remote_data.py --data-dir data
 ```
 
 本机系统 `python3` 缺少 `PyYAML`，运行 `quick_validate.py` 时使用 `/opt/anaconda3/bin/python`。
+
+## 搜索与排序规则
+
+- 保留较丰富的 `search_tags` 用于召回，但 `build_indexes.py` 的标签推断只看字段值，不看 schema 字段名；缺失事实 `原文未提及` 不参与搜索文本和标签推断。
+- `search_odyssey.py --json` 默认广召回 30 条候选；排序先做确定性预排序，再做 case-level diversity：每个 case 先取最佳节点，候选不足时再补同 case 的后续节点。
+- 同分结果使用 `query + case_id + node_id` 的稳定 hash 作为最后 tie-breaker，避免原始索引顺序长期偏置。
+- Agent 必须基于候选 JSON 中的 `ranking_evidence`、`matched_terms`、`matched_dimensions` 做最终 rerank；默认展示 3 个不同 case，除非用户明确想深入同一个故事。
 
 ## 采集与事实规则
 

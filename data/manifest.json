@@ -1,10 +1,10 @@
 {
   "database_version": "2026-06-11.1",
-  "updated_at": "2026-06-11T02:27:38Z",
+  "updated_at": "2026-06-11T06:30:50Z",
   "files": {
     "odyssey_search_index": {
       "path": "data/odyssey_search_index.json",
-      "sha256": "a429a25509e5c673e7acd4266a7845cc1f1c66bbe73f0d1970448e16d589dfb8",
+      "sha256": "034813ba568e9e6b4691b31efe9ee769dc609cb4cb88e717ffdc87f0fe20b0f9",
       "record_count": 243
     },
     "source_index": {

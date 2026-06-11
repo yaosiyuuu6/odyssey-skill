@@ -2,14 +2,21 @@
 
 The search is evidence-bounded. It ranks real decision nodes from the Odyssey cloud index; it does not search the open web.
 
-## Ranking Priorities
+## Retrieval And Reranking
+
+The script does broad retrieval and deterministic pre-ranking. It returns a diversified JSON candidate pool, usually up to 30 nodes, with `ranking_evidence`, `matched_terms`, and `matched_dimensions`.
+
+The Agent does the final rerank from that evidence. Do not automatically use the first three script results as the answer. Prefer three different cases by default; only show multiple nodes from the same case when the user wants to go deeper into that story or when there are not enough relevant cases.
+
+## Agent Reranking Priorities
 
 1. Decision scene match.
 2. Constraint and resource match.
 3. Cost/risk match.
 4. Action path match.
-5. Podcast source availability.
-6. Result similarity.
+5. Result similarity.
+6. Source quality and traceability.
+7. Diversity across cases.
 
 Results are useful as references, not as recommended choices.
 

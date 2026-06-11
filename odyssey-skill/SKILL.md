@@ -24,8 +24,8 @@ Use this skill when the user asks questions like:
 4. Before showing story fragments, if the user has not shared enough background to search precisely, ask one light optional background question about career stage, city/region, current choice type, or main constraint. If the user explicitly asks to see cases now, do not block search on missing background.
 5. If the user gives a short answer, shows little need to continue expressing, or asks to see cases, move into search.
 6. Before searching, frame it as looking at stories together: “好，那我先往‘想停下来，但现实压力还在’的方向找几个真实故事。我们不急着下结论，先一起看看别人是怎么走过这段的。”
-7. Search the cloud index with `scripts/search_odyssey.py --json` to inspect up to 6 candidate cases before choosing what to show.
-8. First offer a few short story fragments and let the user choose which one to continue with. Default to 3 fragments, but show fewer when matches are weak and more when several candidates are genuinely close. Avoid database-card language.
+7. Search the cloud index with `scripts/search_odyssey.py --json` to inspect a broad candidate pool before choosing what to show. The script returns diversified candidates and ranking evidence; you do the final rerank from the evidence instead of automatically showing the first three.
+8. First offer a few short story fragments and let the user choose which one to continue with. Default to 3 different cases, but show fewer when matches are weak and more when several candidates are genuinely close. Avoid database-card language. Do not show multiple nodes from the same case unless the user asks to go deeper into that story.
 9. When expanding a story, tell what they faced, why it was uncertain, what they tried, what it cost, what happened later, and where to listen/read.
 10. End by pointing back to the full source rather than forcing the user to summarize themselves.
 
@@ -37,7 +37,7 @@ Run from the skill directory or with an absolute path:
 python3 scripts/search_odyssey.py "大厂产品经理 工作四年 想裸辞 推荐播客" --json
 ```
 
-JSON mode returns up to 6 ranked candidates by default. Use those candidates as the evidence pool, then choose the most relevant stories for the user-facing answer. Normal prose usually shows 3 fragments, but the number can vary with match quality.
+JSON mode returns up to 30 diversified candidates by default. Use `ranking_evidence`, `matched_terms`, and `matched_dimensions` as the evidence pool, then choose the most relevant stories for the user-facing answer. Normal prose usually shows 3 fragments from different cases, but the number can vary with match quality.
 
 Optional environment variables:
 
