@@ -1,0 +1,3 @@
+display_name: Odyssey Case Ingestion
+short_description: Maintain the Odyssey 3.0 candidate and case ingestion workflow.
+default_prompt: Search Odyssey 3.0 candidate cases, write them to the Lark Base review table, then sync selected case3.0 data into odyssey-skill after validation.

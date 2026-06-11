@@ -1,0 +1,332 @@
+[
+  {
+    "case_id": "case_21",
+    "title": "E83 | 对话朱萧木：顶级主播如何炼成？一个走过创业四季和生死的电商人故事",
+    "source_id": "case3:podcast_21",
+    "source_path": "",
+    "text_length": 0,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_1",
+    "notes": "第一批已按转写精读重写"
+  },
+  {
+    "case_id": "case_22",
+    "title": "144. 对阳萌的4小时访谈：消费电子死与生、第三类公司、端侧模型、产品方法、游戏模式",
+    "source_id": "case3:podcast_22",
+    "source_path": "",
+    "text_length": 0,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_1",
+    "notes": "第一批已按转写精读重写"
+  },
+  {
+    "case_id": "case_23",
+    "title": "S9E4 鲁豫对话蒙曼 | 生命不要早知如此，我决定更勇敢",
+    "source_id": "case3:podcast_23",
+    "source_path": "",
+    "text_length": 0,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_1",
+    "notes": "第一批已按转写精读重写"
+  },
+  {
+    "case_id": "case_24",
+    "title": "91.天才女友｜世界就是草台班子，你还不敢上？",
+    "source_id": "case3:podcast_24",
+    "source_path": "",
+    "text_length": 0,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_1",
+    "notes": "第一批已按转写精读重写"
+  },
+  {
+    "case_id": "case_25",
+    "title": "EP94: 從30年前的矽谷说起：Google、职涯选择、育兒、退休 - Podcast on Firstory",
+    "source_id": "case3:podcast_25",
+    "source_path": "",
+    "text_length": 0,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_1",
+    "notes": "第一批已按转写精读重写"
+  },
+  {
+    "case_id": "case_26",
+    "title": "S9E3 鲁豫对话蔡皋 | 我本布衣，种花种草种春天",
+    "source_id": "case3:podcast_26",
+    "source_path": "",
+    "text_length": 0,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_1",
+    "notes": "第一批已按转写精读重写"
+  },
+  {
+    "case_id": "case_27",
+    "title": "在海外办中文脱口秀，能活吗？付航、杨笠，澳洲喊你回家吃饭！｜对话团子",
+    "source_id": "case3:podcast_27",
+    "source_path": "",
+    "text_length": 0,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_1",
+    "notes": "第一批已按转写精读重写"
+  },
+  {
+    "case_id": "case_28",
+    "title": "S9E2 鲁豫对话张诺｜我不优秀，但我依然是一个胜利者",
+    "source_id": "case3:podcast_28",
+    "source_path": "",
+    "text_length": 0,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_1",
+    "notes": "第一批已按转写精读重写"
+  },
+  {
+    "case_id": "case_29",
+    "title": "89.天才女友｜做好准备，迎接你的第二个青春期",
+    "source_id": "podcast_029",
+    "source_path": "data/assets/2026-06-10/assets/podcast_029/audio.faster_whisper.transcript.txt",
+    "text_length": 11134,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_30",
+    "title": "S9E1 鲁豫对话张赞英 | 那朵叫「赞英」的花",
+    "source_id": "podcast_030",
+    "source_path": "data/assets/2026-06-10/assets/podcast_030/audio.faster_whisper.transcript.txt",
+    "text_length": 27198,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_31",
+    "title": "88.武林高手｜接受质疑否定？还是破局成事？肯德基前公关高管有高招！",
+    "source_id": "podcast_031",
+    "source_path": "data/assets/2026-06-10/assets/podcast_031/audio.faster_whisper.transcript.txt",
+    "text_length": 16092,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_32",
+    "title": "140. 对姚顺宇的4小时访谈：请允许我小疯一下！在Anthropic和Gemini训模型、技术预测、英雄主义已过去",
+    "source_id": "podcast_032",
+    "source_path": "data/assets/2026-06-10/assets/podcast_032/audio.faster_whisper.transcript.txt",
+    "text_length": 79233,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_33",
+    "title": "S8E9 鲁豫对话李睿｜我只是一名记者，留在了战争发生的地方",
+    "source_id": "podcast_033",
+    "source_path": "data/assets/2026-06-10/assets/podcast_033/audio.faster_whisper.transcript.txt",
+    "text_length": 38719,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_34",
+    "title": "87.天才女友｜不求被爱，好好自爱",
+    "source_id": "podcast_034",
+    "source_path": "data/assets/2026-06-10/assets/podcast_034/audio.faster_whisper.transcript.txt",
+    "text_length": 16032,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_35",
+    "title": "从央视纪录片到爆款 AI 短剧：第一批「转身」的导演 | S10E11",
+    "source_id": "podcast_035",
+    "source_path": "data/assets/2026-06-10/assets/podcast_035/audio.faster_whisper.transcript.txt",
+    "text_length": 15794,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_36",
+    "title": "E78｜对话影石：Think bold，勇敢的人先享受世界",
+    "source_id": "podcast_036",
+    "source_path": "data/assets/2026-06-10/assets/podcast_036/audio.faster_whisper.transcript.txt",
+    "text_length": 16211,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_37",
+    "title": "优化胜率而非赔率，把一件事做到理论上该有的样子｜对谈连续创业者 Albert",
+    "source_id": "podcast_037",
+    "source_path": "data/assets/2026-06-10/assets/podcast_037/audio.faster_whisper.transcript.txt",
+    "text_length": 25453,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_38",
+    "title": "S8E8 鲁豫对话张虹 | 冰场上的向日葵，日复一日、向光疯长",
+    "source_id": "podcast_038",
+    "source_path": "data/assets/2026-06-10/assets/podcast_038/audio.faster_whisper.transcript.txt",
+    "text_length": 33923,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_39",
+    "title": "自我进化论｜No.75：「母女关系」：我们一生剧本的隐喻",
+    "source_id": "podcast_039",
+    "source_path": "data/assets/2026-06-10/assets/podcast_039/audio.faster_whisper.transcript.txt",
+    "text_length": 28507,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_2",
+    "notes": "第二批 Podcast 已按转写精读重写"
+  },
+  {
+    "case_id": "case_40",
+    "title": "三年没见的前同事离职后跟我说：我再也不想上班了",
+    "source_id": "bilibili_040",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_040/audio.faster_whisper.transcript.txt",
+    "text_length": 3536,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_41",
+    "title": "《候场》对话俞丽拿：来不及孤独【视频播客】",
+    "source_id": "bilibili_041",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_041/audio.faster_whisper.transcript.txt",
+    "text_length": 10072,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_42",
+    "title": "王晶：我们所在的行业，一半的公司是黑道。6月11日，听导演王晶讲香港电影黄金年代的黑暗故事",
+    "source_id": "bilibili_042",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_042/audio.faster_whisper.transcript.txt",
+    "text_length": 180,
+    "case_viability": "blocked",
+    "deep_read_status": "blocked_2026-06-11_batch_3",
+    "notes": "不发布：文本不足以支撑完整人生决策案例"
+  },
+  {
+    "case_id": "case_43",
+    "title": "陈刚：在药厂做食品，我赌了一条没人敢走的路",
+    "source_id": "bilibili_043",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_043/audio.faster_whisper.transcript.txt",
+    "text_length": 6989,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_44",
+    "title": "《候场》对话演员陈龙：回到人间烟火【视频播客】",
+    "source_id": "bilibili_044",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_044/audio.faster_whisper.transcript.txt",
+    "text_length": 13951,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_45",
+    "title": "罗永浩：我最佩服的中国脱口秀真神！！！",
+    "source_id": "bilibili_045",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_045/audio.faster_whisper.transcript.txt",
+    "text_length": 3096,
+    "case_viability": "blocked",
+    "deep_read_status": "blocked_2026-06-11_batch_3",
+    "notes": "不发布：文本不足以支撑完整人生决策案例"
+  },
+  {
+    "case_id": "case_46",
+    "title": "跟三个中登朋友，聊聊人到中年的焦虑与变化",
+    "source_id": "bilibili_046",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_046/audio.faster_whisper.transcript.txt",
+    "text_length": 21779,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_47",
+    "title": "《候场》对话梁永安：抓住人生的决定性瞬间【视频播客】",
+    "source_id": "bilibili_047",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_047/audio.faster_whisper.transcript.txt",
+    "text_length": 11755,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_48",
+    "title": "《候场》对话鲁肃：让京剧叛逆一回【视频播客】",
+    "source_id": "bilibili_048",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_048/audio.faster_whisper.transcript.txt",
+    "text_length": 9758,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_49",
+    "title": "急诊医生卢骁：为了救人，我们给病人灌了10瓶二锅头",
+    "source_id": "bilibili_049",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_049/audio.faster_whisper.transcript.txt",
+    "text_length": 5964,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_50",
+    "title": "《候场》对话石倚洁：那些跨过的山【视频播客】",
+    "source_id": "bilibili_050",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_050/audio.faster_whisper.transcript.txt",
+    "text_length": 13047,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_51",
+    "title": "【正片】郑执×罗永浩！总是赶末班车的人，可以改进时间管理......也可以拥有一辆属于自己的车",
+    "source_id": "bilibili_051",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_051/audio.faster_whisper.transcript.txt",
+    "text_length": 6176,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_52",
+    "title": "《候场》对话83岁配音艺术家乔榛：如何老去？【视频播客】",
+    "source_id": "bilibili_052",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_052/audio.faster_whisper.transcript.txt",
+    "text_length": 10625,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  },
+  {
+    "case_id": "case_53",
+    "title": "那年风口，我从军工转行IC设计",
+    "source_id": "bilibili_053",
+    "source_path": "data/assets/2026-06-10/assets/bilibili_053/audio.faster_whisper.transcript.txt",
+    "text_length": 4242,
+    "case_viability": "成案",
+    "deep_read_status": "refined_2026-06-11_batch_3",
+    "notes": "第三批 Bilibili 已按转写精读重写"
+  }
+]

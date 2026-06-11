@@ -1,0 +1,100 @@
+[
+  {
+    "case_id": "case_40",
+    "url": "https://www.bilibili.com/video/BV1inE46EExQ",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_40_三年没见的前同事离职后跟我说_我再也不想上班了.bilibili.json"
+  },
+  {
+    "case_id": "case_41",
+    "url": "https://www.bilibili.com/video/BV13mVS6hEKj",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_41_候场_对话俞丽拿_来不及孤独_视频播客.bilibili.json"
+  },
+  {
+    "case_id": "case_42",
+    "url": "https://www.bilibili.com/video/BV1a3EX6nE6C",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_42_王晶_我们所在的行业_一半的公司是黑道_6月11日_听导演王晶讲香港电影黄金年代的黑暗故事.bilibili.json"
+  },
+  {
+    "case_id": "case_43",
+    "url": "https://www.bilibili.com/video/BV1MHVh6iE6C",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_43_陈刚_在药厂做食品_我赌了一条没人敢走的路.bilibili.json"
+  },
+  {
+    "case_id": "case_44",
+    "url": "https://www.bilibili.com/video/BV1mh5R66EtM",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_44_候场_对话演员陈龙_回到人间烟火_视频播客.bilibili.json"
+  },
+  {
+    "case_id": "case_45",
+    "url": "https://www.bilibili.com/video/BV1QEE36eE36",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_45_罗永浩_我最佩服的中国脱口秀真神.bilibili.json"
+  },
+  {
+    "case_id": "case_46",
+    "url": "https://www.bilibili.com/video/BV1cZG26PEEy",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_46_跟三个中登朋友_聊聊人到中年的焦虑与变化.bilibili.json"
+  },
+  {
+    "case_id": "case_47",
+    "url": "https://www.bilibili.com/video/BV1gMZFBcEoh",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_47_候场_对话梁永安_抓住人生的决定性瞬间_视频播客.bilibili.json"
+  },
+  {
+    "case_id": "case_48",
+    "url": "https://www.bilibili.com/video/BV1kHDXB1E8n",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_48_候场_对话鲁肃_让京剧叛逆一回_视频播客.bilibili.json"
+  },
+  {
+    "case_id": "case_49",
+    "url": "https://www.bilibili.com/video/BV13CLq6YEbN",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_49_急诊医生卢骁_为了救人_我们给病人灌了10瓶二锅头.bilibili.json"
+  },
+  {
+    "case_id": "case_50",
+    "url": "https://www.bilibili.com/video/BV1T2XQBtEim",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_50_候场_对话石倚洁_那些跨过的山_视频播客.bilibili.json"
+  },
+  {
+    "case_id": "case_51",
+    "url": "https://www.bilibili.com/video/BV1wqLm67EY6",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_51_正片_郑执_罗永浩_总是赶末班车的人_可以改进时间管理......也可以拥有一辆属于自己的车.bilibili.json"
+  },
+  {
+    "case_id": "case_52",
+    "url": "https://www.bilibili.com/video/BV1ZCwJzrE1E",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_52_候场_对话83岁配音艺术家乔榛_如何老去_视频播客.bilibili.json"
+  },
+  {
+    "case_id": "case_53",
+    "url": "https://www.bilibili.com/video/BV1d99fBfE6Z",
+    "status": "needs_asr",
+    "reason": "no_official_subtitle",
+    "metadata_path": "/Users/chenkai/Desktop/CodeX/OdysseyMap/data/acquisition/case_53_那年风口_我从军工转行IC设计.bilibili.json"
+  }
+]

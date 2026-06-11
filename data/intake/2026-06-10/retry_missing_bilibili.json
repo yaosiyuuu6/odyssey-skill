@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "case_49",
+    "case_number": 49,
+    "record_id": "recvm7ZcPrUvcW",
+    "title": "急诊医生卢骁：为了救人，我们给病人灌了10瓶二锅头",
+    "person_or_guest": "凉子访谈录",
+    "platform": "Bilibili",
+    "url": "https://www.bilibili.com/video/BV13CLq6YEbN",
+    "source_type": "bilibili",
+    "topic_tags": [
+      "选校/专业",
+      "组织/管理"
+    ],
+    "possible_decision_scene": "如何选择学校或专业方向",
+    "text_availability": "可获取字幕或需音频 ASR",
+    "priority": "P2",
+    "notes": "query=凉子访谈录; bvid=BV13CLq6YEbN",
+    "source_id": "case3:bilibili_49",
+    "slug": "急诊医生卢骁_为了救人_我们给病人灌了10瓶二锅头"
+  },
+  {
+    "case_id": "case_51",
+    "case_number": 51,
+    "record_id": "recvm7ZdxFEORa",
+    "title": "【正片】郑执×罗永浩！总是赶末班车的人，可以改进时间管理......也可以拥有一辆属于自己的车",
+    "person_or_guest": "罗永浩的十字路口",
+    "platform": "Bilibili",
+    "url": "https://www.bilibili.com/video/BV1wqLm67EY6",
+    "source_type": "bilibili",
+    "topic_tags": [
+      "城市选择",
+      "组织/管理"
+    ],
+    "possible_decision_scene": "是否更换工作和生活城市",
+    "text_availability": "可获取字幕或需音频 ASR",
+    "priority": "P2",
+    "notes": "query=罗永浩的十字路口; bvid=BV1wqLm67EY6",
+    "source_id": "case3:bilibili_51",
+    "slug": "正片_郑执_罗永浩_总是赶末班车的人_可以改进时间管理......也可以拥有一辆属于自己的车"
+  }
+]

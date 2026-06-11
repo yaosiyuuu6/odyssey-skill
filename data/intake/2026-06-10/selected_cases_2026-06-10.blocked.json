@@ -1,0 +1,16 @@
+[
+  {
+    "case_id": "case_42",
+    "status": "blocked",
+    "reason": "转写仅180字，属于预告片片段，缺少完整人生选择链。",
+    "blocked_at": "2026-06-11",
+    "source_text_path": "data/assets/2026-06-10/assets/bilibili_042/audio.faster_whisper.transcript.txt"
+  },
+  {
+    "case_id": "case_45",
+    "status": "blocked",
+    "reason": "转写为脱口秀/路怒片段，缺少可成案的人生决策节点。",
+    "blocked_at": "2026-06-11",
+    "source_text_path": "data/assets/2026-06-10/assets/bilibili_045/audio.faster_whisper.transcript.txt"
+  }
+]

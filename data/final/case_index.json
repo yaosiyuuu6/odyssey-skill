@@ -1,0 +1,410 @@
+[
+  {
+    "case_id": "case_01",
+    "case_title": "华为德国",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 6,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_02",
+    "case_title": "国企出国",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 5,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_03",
+    "case_title": "林木",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 5,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_04",
+    "case_title": "卫哲",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 16,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_05",
+    "case_title": "大厂裸辞来澳洲",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 10,
+    "protagonist_count": 2
+  },
+  {
+    "case_id": "case_06",
+    "case_title": "Olga工作",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 8,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_07",
+    "case_title": "葱花",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 6,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_08",
+    "case_title": "微软阿里创业",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 12,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_09",
+    "case_title": "Cath长期主义",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 10,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_10",
+    "case_title": "长期主义",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 6,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_11",
+    "case_title": "博彩段子",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 6,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_12",
+    "case_title": "妙鸭",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 8,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_13",
+    "case_title": "范皓宇 - 原教旨PM",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 6,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_14",
+    "case_title": "酱油 - 漫剧",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 6,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_15",
+    "case_title": "张春",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 6,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_16",
+    "case_title": "CFO",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_17",
+    "case_title": "本科同学深漂八年",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 7,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_18",
+    "case_title": "战鹰",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 5,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_19",
+    "case_title": "徐志胜",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 4,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_20",
+    "case_title": "Tim",
+    "case_file": "",
+    "transcript_file": "",
+    "decision_node_count": 9,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_21",
+    "case_title": "E83 对话朱萧木 顶级主播如何炼成 一个走过创业四季和生死的电商人故事",
+    "case_file": "case3.0/case_21_E83_对话朱萧木_顶级主播如何炼成_一个走过创业四季和生死的电商人故事.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_22",
+    "case_title": "144. 对阳萌的4小时访谈 消费电子死与生 第三类公司 端侧模型 产品方法 游戏模",
+    "case_file": "case3.0/case_22_144._对阳萌的4小时访谈_消费电子死与生_第三类公司_端侧模型_产品方法_游戏模.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_23",
+    "case_title": "S9E4 鲁豫对话蒙曼 生命不要早知如此 我决定更勇敢",
+    "case_file": "case3.0/case_23_S9E4_鲁豫对话蒙曼_生命不要早知如此_我决定更勇敢.md",
+    "transcript_file": "",
+    "decision_node_count": 4,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_24",
+    "case_title": "91.天才女友 世界就是草台班子 你还不敢上",
+    "case_file": "case3.0/case_24_91.天才女友_世界就是草台班子_你还不敢上.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_25",
+    "case_title": "EP94 從30年前的矽谷说起 Google 职涯选择 育兒 退休 - Podcas",
+    "case_file": "case3.0/case_25_EP94_從30年前的矽谷说起_Google_职涯选择_育兒_退休_-_Podcas.md",
+    "transcript_file": "",
+    "decision_node_count": 4,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_26",
+    "case_title": "S9E3 鲁豫对话蔡皋 我本布衣 种花种草种春天",
+    "case_file": "case3.0/case_26_S9E3_鲁豫对话蔡皋_我本布衣_种花种草种春天.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_27",
+    "case_title": "在海外办中文脱口秀 能活吗 付航 杨笠 澳洲喊你回家吃饭 对话团子",
+    "case_file": "case3.0/case_27_在海外办中文脱口秀_能活吗_付航_杨笠_澳洲喊你回家吃饭_对话团子.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_28",
+    "case_title": "S9E2 鲁豫对话张诺 我不优秀 但我依然是一个胜利者",
+    "case_file": "case3.0/case_28_S9E2_鲁豫对话张诺_我不优秀_但我依然是一个胜利者.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_29",
+    "case_title": "89.天才女友 做好准备 迎接你的第二个青春期",
+    "case_file": "case3.0/case_29_89.天才女友_做好准备_迎接你的第二个青春期.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_30",
+    "case_title": "S9E1 鲁豫对话张赞英 那朵叫 赞英 的花",
+    "case_file": "case3.0/case_30_S9E1_鲁豫对话张赞英_那朵叫_赞英_的花.md",
+    "transcript_file": "",
+    "decision_node_count": 4,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_31",
+    "case_title": "88.武林高手 接受质疑否定 还是破局成事 肯德基前公关高管有高招",
+    "case_file": "case3.0/case_31_88.武林高手_接受质疑否定_还是破局成事_肯德基前公关高管有高招.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_32",
+    "case_title": "140. 对姚顺宇的4小时访谈 请允许我小疯一下 在Anthropic和Gemini",
+    "case_file": "case3.0/case_32_140._对姚顺宇的4小时访谈_请允许我小疯一下_在Anthropic和Gemini.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_33",
+    "case_title": "S8E9 鲁豫对话李睿 我只是一名记者 留在了战争发生的地方",
+    "case_file": "case3.0/case_33_S8E9_鲁豫对话李睿_我只是一名记者_留在了战争发生的地方.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_34",
+    "case_title": "87.天才女友 不求被爱 好好自爱",
+    "case_file": "case3.0/case_34_87.天才女友_不求被爱_好好自爱.md",
+    "transcript_file": "",
+    "decision_node_count": 4,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_35",
+    "case_title": "从央视纪录片到爆款 AI 短剧 第一批 转身 的导演 S10E11",
+    "case_file": "case3.0/case_35_从央视纪录片到爆款_AI_短剧_第一批_转身_的导演_S10E11.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_36",
+    "case_title": "E78 对话影石 Think bold 勇敢的人先享受世界",
+    "case_file": "case3.0/case_36_E78_对话影石_Think_bold_勇敢的人先享受世界.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_37",
+    "case_title": "优化胜率而非赔率 把一件事做到理论上该有的样子 对谈连续创业者 Albert",
+    "case_file": "case3.0/case_37_优化胜率而非赔率_把一件事做到理论上该有的样子_对谈连续创业者_Albert.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_38",
+    "case_title": "S8E8 鲁豫对话张虹 冰场上的向日葵 日复一日 向光疯长",
+    "case_file": "case3.0/case_38_S8E8_鲁豫对话张虹_冰场上的向日葵_日复一日_向光疯长.md",
+    "transcript_file": "",
+    "decision_node_count": 4,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_39",
+    "case_title": "自我进化论 No.75 母女关系 我们一生剧本的隐喻",
+    "case_file": "case3.0/case_39_自我进化论_No.75_母女关系_我们一生剧本的隐喻.md",
+    "transcript_file": "",
+    "decision_node_count": 4,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_40",
+    "case_title": "三年没见的前同事离职后跟我说 我再也不想上班了",
+    "case_file": "case3.0/case_40_三年没见的前同事离职后跟我说_我再也不想上班了.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_41",
+    "case_title": "候场 对话俞丽拿 来不及孤独 视频播客",
+    "case_file": "case3.0/case_41_候场_对话俞丽拿_来不及孤独_视频播客.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_43",
+    "case_title": "陈刚 在药厂做食品 我赌了一条没人敢走的路",
+    "case_file": "case3.0/case_43_陈刚_在药厂做食品_我赌了一条没人敢走的路.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_44",
+    "case_title": "候场 对话演员陈龙 回到人间烟火 视频播客",
+    "case_file": "case3.0/case_44_候场_对话演员陈龙_回到人间烟火_视频播客.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_46",
+    "case_title": "跟三个中登朋友 聊聊人到中年的焦虑与变化",
+    "case_file": "case3.0/case_46_跟三个中登朋友_聊聊人到中年的焦虑与变化.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_47",
+    "case_title": "候场 对话梁永安 抓住人生的决定性瞬间 视频播客",
+    "case_file": "case3.0/case_47_候场_对话梁永安_抓住人生的决定性瞬间_视频播客.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_48",
+    "case_title": "候场 对话鲁肃 让京剧叛逆一回 视频播客",
+    "case_file": "case3.0/case_48_候场_对话鲁肃_让京剧叛逆一回_视频播客.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_49",
+    "case_title": "急诊医生卢骁 为了救人 我们给病人灌了10瓶二锅头",
+    "case_file": "case3.0/case_49_急诊医生卢骁_为了救人_我们给病人灌了10瓶二锅头.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_50",
+    "case_title": "候场 对话石倚洁 那些跨过的山 视频播客",
+    "case_file": "case3.0/case_50_候场_对话石倚洁_那些跨过的山_视频播客.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_51",
+    "case_title": "正片 郑执 罗永浩 总是赶末班车的人 可以改进时间管理......也可以拥有一辆属于",
+    "case_file": "case3.0/case_51_正片_郑执_罗永浩_总是赶末班车的人_可以改进时间管理......也可以拥有一辆属于.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_52",
+    "case_title": "候场 对话83岁配音艺术家乔榛 如何老去 视频播客",
+    "case_file": "case3.0/case_52_候场_对话83岁配音艺术家乔榛_如何老去_视频播客.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  },
+  {
+    "case_id": "case_53",
+    "case_title": "那年风口 我从军工转行IC设计",
+    "case_file": "case3.0/case_53_那年风口_我从军工转行IC设计.md",
+    "transcript_file": "",
+    "decision_node_count": 3,
+    "protagonist_count": 1
+  }
+]

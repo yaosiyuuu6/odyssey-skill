@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 .DS_Store
 .cache/
+data/assets/**/*.m4a
+data/assets/**/*.mp3
+data/assets/**/*.m4s
+data/assets/**/*.mp4
+data/assets/**/*.wav
+data/assets/**/*.webm
