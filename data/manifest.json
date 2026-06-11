@@ -1,16 +1,16 @@
 {
-  "database_version": "2026-06-09.1",
-  "updated_at": "2026-06-09T12:21:16Z",
+  "database_version": "2026-06-11.1",
+  "updated_at": "2026-06-11T02:27:38Z",
   "files": {
     "odyssey_search_index": {
       "path": "data/odyssey_search_index.json",
-      "sha256": "916c8979adfd8636102d497387c7b8ff2e8dfcf1bf19a03c1f782d62c3eb4ca6",
-      "record_count": 144
+      "sha256": "a429a25509e5c673e7acd4266a7845cc1f1c66bbe73f0d1970448e16d589dfb8",
+      "record_count": 243
     },
     "source_index": {
       "path": "data/source_index.json",
-      "sha256": "15d026ad80ffaac0774a356a15320b29eb2791b2974d6ba850d22dd6d82885be",
-      "record_count": 21
+      "sha256": "ce547922a323725339ac4023a750d5c6fc0d302255da5479abd6758ebcb41cc6",
+      "record_count": 52
     }
   }
 }
